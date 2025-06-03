@@ -23,12 +23,10 @@ const Footer = () => {
               <a href="https://linkedin.com" aria-label="LinkedIn" className="text-neutral-400 hover:text-white transition">
                 <span className="material-icons">linkedin</span>
               </a>
-              <a href="https://twitter.com" aria-label="Twitter" className="text-neutral-400 hover:text-white transition">
-                <span className="material-icons">twitter</span>
-              </a>
+             
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-condensed font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
@@ -40,7 +38,7 @@ const Footer = () => {
               <li><a href="/#contact" className="text-neutral-400 hover:text-white transition">Contact Us</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-condensed font-bold mb-6">Our Products</h3>
             <ul className="space-y-3">
@@ -52,33 +50,35 @@ const Footer = () => {
               <li><Link href="/products/chequered-plates" className="text-neutral-400 hover:text-white transition">Chequered Plates</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-condensed font-bold mb-6">Contact Info</h3>
             <ul className="space-y-4">
               <li className="flex">
                 <span className="material-icons text-secondary mr-3">location_on</span>
                 <span className="text-neutral-400">
-                  123 Industrial Area, Phase II<br />
-                  Mumbai, Maharashtra 400001
+                  Office No. B-1037, 1st Floor, B Wing,<br />
+                  Bima Complex, Plot No. 119, KWC,<br />
+                  Steel Market, Kalamboli,<br />
+                  Navi Mumbai - 410218, Maharashtra, India
                 </span>
               </li>
               <li className="flex">
                 <span className="material-icons text-secondary mr-3">phone</span>
-                <a href="tel:+919999999999" className="text-neutral-400 hover:text-white transition">+91 99999 99999</a>
+                <a href="tel:+91 8828403987" className="text-neutral-400 hover:text-white transition">+91 8828403987</a>
               </li>
               <li className="flex">
                 <span className="material-icons text-secondary mr-3">email</span>
-                <a href="mailto:info@rjenterpriseinfo.com" className="text-neutral-400 hover:text-white transition">info@rjenterpriseinfo.com</a>
+                <a href="mailto:info@rjenterpriseinfo.com" className="text-neutral-400 hover:text-white transition">sales@rjenterpriseinfo.com</a>
               </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-neutral-700 text-center text-neutral-500">
           <p>&copy; {new Date().getFullYear()} R J Enterprise. All Rights Reserved.</p>
           <p className="mt-2 text-sm">
-            <Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link> | 
+            <Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link> |
             <Link href="/terms-of-service" className="hover:text-white transition ml-1">Terms of Service</Link>
           </p>
         </div>
