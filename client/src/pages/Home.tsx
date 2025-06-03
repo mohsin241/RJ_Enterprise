@@ -22,7 +22,7 @@ const Home = () => {
         <meta property="og:url" content="https://www.rjenterpriseinfo.com/" />
         <meta property="og:title" content="R J Enterprise | Premium Steel Supplier & Distributor in India" />
         <meta property="og:description" content="Leading supplier of industrial-grade steel products including TMT bars, plates & coils for construction, manufacturing & oil & gas sectors." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1616737676197-696fe94df40a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" />
+        <meta property="og:image" content="../assets/logo.png" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

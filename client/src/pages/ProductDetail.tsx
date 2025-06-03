@@ -1,20 +1,29 @@
 import { useParams } from 'wouter';
-import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import Contact from '@/components/home/Contact';
 import { Product } from '@/types';
+import tmt from "../../src/assets/TMT Bar 1.jpg"
+import coil from "../../src/assets/Stainless-Steel-Cold-Rolling-Coil-304.jpg"
+import beam from "../../src/assets/wmremove-transformed.jpg"
+import chequered from "../../src/assets/ms-chequered-plates.jpg"
+import round from "../../src/assets/mild-steel-round-bars-1530870379-4069527.jpg"
+import plate from "../../src/assets/ms-plates-1000x1000.jpg"
+import c45 from "../../src/assets/alloy-steel-plates.jpg"
+import square from "../../src/assets/tool-steel-alloy-steel-square-bars.jpg"
+import channel from "../../src/assets/stainless-steel-channels-1595395255.jpg"
+import bq from "../../src/assets/Boiler-Quality-Plate-SA516-Gr70n-Nace-Hic-Pressure-Vessel-Steel-Plates-Carbon-Steel-Sheet.jpg"
+import angle from "../../src/assets/mild-steel-angles-1024812.jpg"
 
-// Mock product data - in a real application this would come from an API
 const products: Record<string, Product> = {
-  'tmt-bars': {
+   'tmt-bars': {
     id: 'tmt-bars',
     name: 'TMT Bars',
     fullName: 'Thermo-Mechanically Treated Steel Bars',
     description: 'High-strength thermo-mechanically treated steel reinforcement bars with excellent ductility and weldability.',
     longDescription: 'Our premium thermo-mechanically treated (TMT) steel reinforcement bars are designed for superior performance in construction applications. With high tensile strength, excellent bendability, and optimum ductility, these bars provide enhanced safety and durability for structural concrete. Our TMT bars offer improved earthquake resistance and corrosion protection, making them ideal for modern construction projects. Available in various diameters and grades, these bars meet all national and international quality standards including IS:1786.',
-    image: 'https://pixabay.com/get/gdb6e70464eb0392a0df19a6ccc90ba67a492de9414710e63d3fd355c0d32bd5ab568aba6bb499511da01f0e8bf690baf5db4379d229616661dd6221a26b2f642_1280.jpg',
+    image: tmt,
     alt: 'Premium TMT steel reinforcement bars for construction projects',
     category: 'construction',
     tags: ['Fe 500', 'Fe 550', 'Ribbed', 'Corrosion-Resistant'],
@@ -41,7 +50,7 @@ const products: Record<string, Product> = {
     fullName: 'IS 2062 Mild Steel Plates & Sheets',
     description: 'Premium-quality mild steel plates with excellent formability, weldability and machinability for various applications.',
     longDescription: 'Our mild steel plates offer exceptional versatility and reliability for a wide range of industrial applications. Manufactured to precise specifications, these plates provide excellent formability, weldability, and machinability. The uniform chemical composition and mechanical properties ensure consistent performance across various fabrication processes. Available in multiple thickness ranges and dimensions, our MS plates can be customized to meet specific project requirements while conforming to IS:2062 standards for structural steel applications.',
-    image: 'https://pixabay.com/get/gf2a22db6888de29cd0ad06a64bf83c256528b1a7a5f2a3b32034ff8038df3872468c6f94a039ce0eebc537b11ea8e538eb8cb5e7bfd7722fe4ab7ca4863b9e85_1280.jpg',
+    image: plate,
     alt: 'High-quality mild steel plates for industrial applications',
     category: 'industrial',
     tags: ['MS IS 2062', '5-150mm', 'Custom Sizes', 'E250 Grade'],
@@ -68,7 +77,7 @@ const products: Record<string, Product> = {
     fullName: 'HR Steel Coils & Sheets',
     description: 'Versatile hot rolled steel coils with uniform mechanical properties ideal for automotive, manufacturing and construction.',
     longDescription: 'Our hot rolled steel coils combine excellent strength with optimal workability for manufacturing applications. Produced through a high-temperature rolling process, these coils feature superior formability, weldability, and consistent mechanical properties. The manufacturing process ensures a smooth surface finish with tight thickness tolerances. Our HR coils are available in various steel grades, widths, and thicknesses to meet diverse industrial requirements. All products comply with IS:10748 standards and can be supplied in sheet or slit form according to customer specifications.',
-    image: 'https://pixabay.com/get/gc017e79272b11cd681dc585ba2135a0597abdc422bf6348f0bf391eda176df3b50694eb4526d4ae0dc344dff86e1a82320f05635fcb441fcd401f0c17b9ea6a2_1280.jpg',
+    image: coil,
     alt: 'Hot rolled steel coils for manufacturing applications',
     category: 'manufacturing',
     tags: ['HRPO', '1.2-25mm', 'IS 10748', 'Customizable'],
@@ -88,38 +97,224 @@ const products: Record<string, Product> = {
       'Home Appliances'
     ],
     relatedProducts: ['steel-beams', 'round-bars']
+  },
+  'steel-beams': {
+    id: 'steel-beams',
+    name: 'Steel Beams',
+    fullName: 'Structural Steel I-Beams and H-Beams',
+    description: 'High-strength structural steel beams designed for optimal load-bearing capacity in construction projects.',
+    longDescription: 'Our structural steel beams, including I-Beams and H-Beams, are engineered for maximum load-bearing performance in construction and infrastructure projects. Manufactured to ISMB and ISLB standards, these beams offer excellent dimensional accuracy, tensile strength, and weldability. Available in multiple sizes and custom lengths, our beams are ideal for framing, supports, and columns in various structural applications.',
+    image: beam,
+    alt: 'Structural steel beams for construction projects',
+    category: 'construction',
+    tags: ['I-Beams', 'H-Beams', 'ISMB', 'ISLB'],
+    specs: [
+      { name: 'Standard', value: 'IS 2062 / IS 808' },
+      { name: 'Type', value: 'ISMB/ISLB/I/H Beams' },
+      { name: 'Size Range', value: '100mm to 600mm' },
+      { name: 'Length', value: '6m to 12m' },
+      { name: 'Surface', value: 'Mill Finish / Painted' }
+    ],
+    applications: [
+      'Bridges & Flyovers',
+      'Multi-story Buildings',
+      'Industrial Sheds',
+      'Warehouse Structures',
+      'Railway & Metro Projects'
+    ],
+    relatedProducts: ['tmt-bars', 'steel-channels']
+  },'chequered-plates': {
+    id: 'chequered-plates',
+    name: 'Chequered Plates',
+    fullName: 'IS 3502 Anti-slip Chequered Steel Plates',
+    description: 'Anti-slip checkered steel plates ideal for flooring, stair treads, and industrial platforms requiring enhanced safety.',
+    longDescription: 'Chequered steel plates are ideal for anti-slip flooring, walkways, and industrial platforms. Manufactured according to IS 3502 standards, our plates offer durability, corrosion resistance, and excellent grip. These plates are commonly used in high-traffic areas and environments where safety is paramount.',
+    image: chequered,
+    alt: 'Industrial checkered steel plates with anti-slip surface',
+    category: 'industrial',
+    tags: ['2.5-12mm', 'IS 3502', 'Five-bar Pattern', 'Custom Cut'],
+    specs: [
+      { name: 'Standard', value: 'IS 3502' },
+      { name: 'Pattern', value: 'Five-bar/tear-drop' },
+      { name: 'Thickness', value: '2.5mm to 12mm' },
+      { name: 'Width', value: '1000mm to 2500mm' },
+      { name: 'Length', value: 'As per requirement' }
+    ],
+    applications: [
+      'Factory Flooring',
+      'Walkways & Ramps',
+      'Truck & Bus Floors',
+      'Rail Coaches',
+      'Industrial Staircases'
+    ],
+    relatedProducts: ['mild-steel-plates', 'steel-channels']
+  },
+
+  'round-bars': {
+    id: 'round-bars',
+    name: 'Round Bars',
+    fullName: 'Bright and Black Round Steel Bars',
+    description: 'High-quality steel round bars with precise dimensions for engineering, automotive, and manufacturing applications.',
+    longDescription: 'Our steel round bars are manufactured using both hot-rolled (black) and cold-drawn (bright) processes to meet the exacting standards of engineering, manufacturing, and automotive industries. With excellent surface finish and tight dimensional tolerance, these bars offer great machinability, strength, and durability.',
+    image: round,
+    alt: 'Premium steel round bars for manufacturing applications',
+    category: 'manufacturing',
+    tags: ['Bright', 'Black', '16-300mm', 'EN 8/C45'],
+    specs: [
+      { name: 'Material', value: 'EN 8, C45, Mild Steel' },
+      { name: 'Diameter', value: '16mm to 300mm' },
+      { name: 'Type', value: 'Bright / Black' },
+      { name: 'Length', value: '5m to 6m' },
+      { name: 'Finish', value: 'Polished / Rough' }
+    ],
+    applications: [
+      'Automotive Shafts',
+      'Machine Components',
+      'Construction Tools',
+      'General Engineering',
+      'Fabrication Work'
+    ],
+    relatedProducts: ['square-bars', 'c45-plates']
+  },
+
+  'c45-plates': {
+    id: 'c45-plates',
+    name: 'C45 Steel Plates',
+    fullName: 'EN 8 Medium Carbon Steel Plates',
+    description: 'Medium carbon steel plates offering excellent machinability, heat treatability, and wear resistance for industrial applications.',
+    longDescription: 'C45 steel plates, also known as EN 8 plates, are widely used in manufacturing components that require high tensile strength and wear resistance. These medium-carbon steel plates offer good machinability and are heat-treatable, making them ideal for gears, shafts, and heavy-duty tools.',
+    image: c45,
+    alt: 'C45 Carbon Steel Plates for industrial machinery and components',
+    category: 'industrial',
+    tags: ['Medium Carbon', 'Heat-Treatable', '1.0503', 'EN 8'],
+    specs: [
+      { name: 'Standard', value: 'EN 10083-2 / DIN 17200' },
+      { name: 'Grade', value: 'C45 / 1.0503' },
+      { name: 'Thickness', value: '10mm to 150mm' },
+      { name: 'Width', value: '1000mm to 2500mm' },
+      { name: 'Hardness', value: '170-210 HB' }
+    ],
+    applications: [
+      'Machine Tools',
+      'Automobile Parts',
+      'Hydraulic Presses',
+      'Gear Wheels',
+      'Heavy Engineering'
+    ],
+    relatedProducts: ['round-bars', 'mild-steel-plates']
+  },
+
+  'square-bars': {
+    id: 'square-bars',
+    name: 'Square Bars',
+    fullName: 'Precision Cold Drawn Steel Square Bars',
+    description: 'Precision-manufactured square steel bars for construction, engineering, and manufacturing applications requiring consistent dimensions.',
+    longDescription: 'Square bars are versatile components in structural and engineering applications. Our square bars are available in a range of sizes and are manufactured using high-grade EN8/EN9 steel. These cold drawn bars offer excellent strength, machinability, and straightness, making them ideal for tools, frames, and support structures.',
+    image: square,
+    alt: 'High-quality square steel bars for industrial applications',
+    category: 'manufacturing',
+    tags: ['10-100mm', 'EN8/EN9', 'Precision Cut', 'Cold Drawn'],
+    specs: [
+      { name: 'Material', value: 'EN8 / EN9' },
+      { name: 'Size', value: '10mm to 100mm' },
+      { name: 'Length', value: '5m to 6m' },
+      { name: 'Surface', value: 'Cold Drawn / Peeled' }
+    ],
+    applications: [
+      'Structural Frames',
+      'Machined Components',
+      'Forgings',
+      'Shafts & Pins',
+      'Fabricated Supports'
+    ],
+    relatedProducts: ['round-bars', 'steel-beams']
+  },
+
+  'steel-channels': {
+    id: 'steel-channels',
+    name: 'Steel Channels',
+    fullName: 'ISMC Structural Steel Channels',
+    description: 'Versatile U-shaped structural steel channels with excellent load-bearing capacity for construction and industrial applications.',
+    longDescription: 'Steel channels, also known as ISMC, are commonly used in structural and civil engineering applications. These U-shaped steel sections are designed for strength and durability, suitable for frames, support systems, and reinforcements in construction and manufacturing projects.',
+    image: channel,
+    alt: 'Structural steel channels for construction frameworks',
+    category: 'construction',
+    tags: ['ISMC', 'Junior Channels', 'Standard Sizes', 'Galvanized'],
+    specs: [
+      { name: 'Standard', value: 'IS 808' },
+      { name: 'Size Range', value: '75mm to 400mm' },
+      { name: 'Length', value: '6m to 12m' },
+      { name: 'Type', value: 'U Channel / C Channel' }
+    ],
+    applications: [
+      'Support Structures',
+      'Bridges',
+      'Frames',
+      'Fabricated Machinery',
+      'Roof Trusses'
+    ],
+    relatedProducts: ['steel-beams', 'angles']
+  },
+
+  'boiler-quality-plates': {
+    id: 'boiler-quality-plates',
+    name: 'Boiler Quality Plates',
+    fullName: 'ASTM A516 Boiler Quality Steel Plates',
+    description: 'Specialized high-temperature resistant steel plates for pressure vessels, boilers, and heat exchangers in industrial applications.',
+    longDescription: 'Boiler Quality Plates are specially designed to withstand high temperature and pressure conditions. Manufactured to ASTM A516 standards, these plates are suitable for boilers, heat exchangers, and pressure vessels. Their chemical composition offers excellent notch toughness and weldability, making them a reliable choice in thermal and petrochemical environments.',
+    image: bq,
+    alt: 'High-temperature resistant boiler quality steel plates for pressure vessels',
+    category: 'industrial',
+    tags: ['ASTM A516', 'High-Temperature', 'Pressure Resistant', 'Grade 70'],
+    specs: [
+      { name: 'Standard', value: 'ASTM A516' },
+      { name: 'Grade', value: '60 / 65 / 70' },
+      { name: 'Thickness', value: '6mm to 150mm' },
+      { name: 'Width', value: '1000mm to 3000mm' },
+      { name: 'Length', value: 'As per requirement' }
+    ],
+    applications: [
+      'Boilers & Heaters',
+      'Pressure Vessels',
+      'Heat Exchangers',
+      'Reactors',
+      'Power Plants'
+    ],
+    relatedProducts: ['mild-steel-plates', 'c45-plates']
+  },
+
+  'angles': {
+    id: 'angles',
+    name: 'Steel Angles',
+    fullName: 'Structural L-Shaped Steel Angles',
+    description: 'L-shaped structural steel angles for framing, bracing, and supports in construction and industrial applications.',
+    longDescription: 'Steel angles are essential for structural framing, reinforcements, and support applications. Available in both equal and unequal configurations, these L-shaped profiles conform to IS 808 standards and provide high strength and load distribution capabilities in structural frameworks.',
+    image: angle,
+    alt: 'Structural steel angles for construction and industrial applications',
+    category: 'construction',
+    tags: ['Equal Angles', 'Unequal Angles', 'IS 808', 'Galvanized'],
+    specs: [
+      { name: 'Standard', value: 'IS 808' },
+      { name: 'Type', value: 'Equal / Unequal' },
+      { name: 'Size Range', value: '25x25mm to 200x200mm' },
+      { name: 'Length', value: '6m to 12m' },
+      { name: 'Surface', value: 'Mill Finish / Painted / Galvanized' }
+    ],
+    applications: [
+      'Structural Framing',
+      'Transmission Towers',
+      'Bracing Systems',
+      'Fabrication Projects',
+      'Rail Infrastructure'
+    ],
+    relatedProducts: ['steel-channels', 'steel-beams']
   }
 };
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState<Product | null>(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate API call to fetch product details
-    setLoading(true);
-    
-    // In a real application, this would be an API call
-    setTimeout(() => {
-      if (id && products[id]) {
-        setProduct(products[id]);
-      }
-      setLoading(false);
-    }, 500);
-  }, [id]);
-
-  if (loading) {
-    return (
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-        </div>
-      </div>
-    );
-  }
-
-  if (!product) {
+  if (!id || !products[id]) {
     return (
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -132,6 +327,8 @@ const ProductDetail = () => {
       </div>
     );
   }
+
+  const product = products[id];
 
   return (
     <>
