@@ -41,15 +41,15 @@ const Contact = () => {
     try {
       // In a real implementation, you would send this data to your API
       console.log('Form submitted:', data);
-      
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you as soon as possible.",
       });
-      
+
       form.reset();
     } catch (error) {
       toast({
@@ -71,11 +71,11 @@ const Contact = () => {
             Get in touch with our team for inquiries, custom requirements, or to request a quote. We're here to assist you with all your steel needs.
           </p>
         </div>
-        
+
         <div className="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="lg:w-1/2 p-8">
             <h3 className="text-xl font-condensed font-bold text-neutral-800 mb-6">Send Us a Message</h3>
-            
+
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -92,7 +92,7 @@ const Contact = () => {
                       </FormItem>
                     )}
                   />
-                  
+
                   <FormField
                     control={form.control}
                     name="company"
@@ -107,7 +107,7 @@ const Contact = () => {
                     )}
                   />
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
@@ -122,7 +122,7 @@ const Contact = () => {
                       </FormItem>
                     )}
                   />
-                  
+
                   <FormField
                     control={form.control}
                     name="phone"
@@ -137,7 +137,7 @@ const Contact = () => {
                     )}
                   />
                 </div>
-                
+
                 <FormField
                   control={form.control}
                   name="product"
@@ -163,7 +163,7 @@ const Contact = () => {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="message"
@@ -171,19 +171,19 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Your Message *</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Please describe your requirements..." 
-                          rows={4} 
-                          {...field} 
+                        <Textarea
+                          placeholder="Please describe your requirements..."
+                          rows={4}
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                
-                <Button 
-                  type="submit" 
+
+                <Button
+                  type="submit"
                   className="w-full bg-primary hover:bg-primary-light text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-md"
                   disabled={isSubmitting}
                 >
@@ -192,41 +192,42 @@ const Contact = () => {
               </form>
             </Form>
           </div>
-          
+
           <div className="lg:w-1/2 bg-primary p-8 text-white">
             <h3 className="text-xl font-condensed font-bold mb-6">Contact Information</h3>
-            
+
             <div className="space-y-6">
               <div className="flex">
                 <span className="material-icons text-secondary mr-4">location_on</span>
                 <div>
                   <h4 className="font-bold mb-1">Our Location</h4>
                   <p className="text-white/80">
-                    123 Industrial Area, Phase II<br />
-                    Mumbai, Maharashtra 400001<br />
-                    India
+                    Office No. B-1037, 1st Floor, B Wing,<br />
+                    Bima Complex, Plot No. 119, KWC,<br />
+                    Steel Market, Kalamboli,<br />
+                    Navi Mumbai - 410218, Maharashtra, India
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex">
                 <span className="material-icons text-secondary mr-4">phone</span>
                 <div>
                   <h4 className="font-bold mb-1">Phone Number</h4>
-                  <p><a href="tel:+919999999999" className="text-white/80 hover:text-white transition">+91 99999 99999</a></p>
-                  <p><a href="tel:+919111111111" className="text-white/80 hover:text-white transition">+91 91111 11111</a></p>
+                  <p><a href="tel:+91 8828403987" className="text-white/80 hover:text-white transition">+91 8828403987</a></p>
+                  {/* <p><a href="tel:+919111111111" className="text-white/80 hover:text-white transition">+91 91111 11111</a></p> */}
                 </div>
               </div>
-              
+
               <div className="flex">
                 <span className="material-icons text-secondary mr-4">email</span>
                 <div>
                   <h4 className="font-bold mb-1">Email Address</h4>
-                  <p><a href="mailto:info@rjenterpriseinfo.com" className="text-white/80 hover:text-white transition">info@rjenterpriseinfo.com</a></p>
-                  <p><a href="mailto:sales@rjenterpriseinfo.com" className="text-white/80 hover:text-white transition">sales@rjenterpriseinfo.com</a></p>
+                  <p><a href="mailto:info@rjenterpriseinfo.com" className="text-white/80 hover:text-white transition">sales@rjenterpriseinfo.com</a></p>
+                  {/* <p><a href="mailto:sales@rjenterpriseinfo.com" className="text-white/80 hover:text-white transition">sales@rjenterpriseinfo.com</a></p> */}
                 </div>
               </div>
-              
+
               <div className="flex">
                 <span className="material-icons text-secondary mr-4">schedule</span>
                 <div>
@@ -237,19 +238,17 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8">
               <h4 className="font-bold mb-4">Connect With Us</h4>
-              <div className="flex space-x-4">
+              <div className="flex gap-3">
                 <a href="https://facebook.com" aria-label="Facebook" className="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition">
                   <span className="material-icons text-white">facebook</span>
                 </a>
-                {/* <a href="https://linkedin.com" aria-label="LinkedIn" className="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition">
+
+                <a href="https://linkedin.com" aria-label="LinkedIn" className="bg-white/10 pl-2 hover:bg-white/20 w-10 h-10 rounded-full flex items-center transition">
                   <span className="material-icons text-white">linkedin</span>
-                </a> */}
-                {/* <a href="https://twitter.com" aria-label="" className="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition">
-                  <span className="material-icons text-white"></span>
-                </a> */}
+                </a>
               </div>
             </div>
           </div>
