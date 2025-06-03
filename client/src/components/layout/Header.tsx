@@ -54,9 +54,9 @@ const Header = () => {
           
           {/* Contact Info */}
           <div className="hidden lg:flex items-center">
-            <a href="tel:+919999999999" className="flex items-center text-primary-dark hover:text-primary transition">
+            <a href="tel:+91 8828403987" className="flex items-center text-primary-dark hover:text-primary transition">
               <span className="material-icons mr-1 text-sm">phone</span>
-              <span className="text-sm font-medium">+91 99999 99999</span>
+              <span className="text-sm font-medium">+91 8828403987</span>
             </a>
           </div>
         </nav>
@@ -73,9 +73,9 @@ const Header = () => {
             <li><a href="/#services" onClick={closeMobileMenu} className="block text-neutral-700 font-medium py-2">Services</a></li>
             <li><a href="/#contact" onClick={closeMobileMenu} className="block text-neutral-700 font-medium py-2">Contact Us</a></li>
             <li className="border-t pt-3">
-              <a href="tel:+919999999999" className="flex items-center text-primary hover:text-primary-light transition py-2">
+              <a href="tel:+91 8828403987" className="flex items-center text-primary hover:text-primary-light transition py-2">
                 <span className="material-icons mr-2">phone</span>
-                <span className="font-medium">+91 99999 99999</span>
+                <span className="font-medium">+91 8828403987</span>
               </a>
             </li>
           </ul>
