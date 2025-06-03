@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { useScroll } from '@/hooks/use-scroll';
-
+import logo from "../../../public/logo.png";
+// import logo from "../../assets/logo.png";
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
@@ -25,7 +26,7 @@ const Header = () => {
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <img src="/logo.png" alt="R J Enterprise Logo" className="h-10 w-auto" />
+            <img src={logo} alt="R J Enterprise Logo" className="h-10 w-auto" />
            
             <div className="text-primary font-condensed font-bold text-xl hidden sm:block">
               R J ENTERPRISE
