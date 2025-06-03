@@ -5,11 +5,11 @@ const services = [
     title: 'Profile Cutting',
     description: 'Precision cutting services for steel plates, sheets, and profiles using advanced CNC technology to meet exact specifications.'
   },
-  {
-    icon: 'inventory_2',
-    title: 'Steel Stockholding',
-    description: 'Extensive inventory of steel products readily available for immediate delivery, reducing your procurement lead times.'
-  },
+  // {
+  //   icon: 'inventory_2',
+  //   title: 'Steel Stockholding',
+  //   description: 'Extensive inventory of steel products readily available for immediate delivery, reducing your procurement lead times.'
+  // },
   {
     icon: 'local_shipping',
     title: 'Logistics & Delivery',
