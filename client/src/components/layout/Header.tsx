@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { useScroll } from '@/hooks/use-scroll';
 import logo from "../../../public/logo.png";
-// import logo from "../../assets/logo.png";
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();

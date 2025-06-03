@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import logo from "../../../public/logo.png";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <img src="client/public/logo.png" alt="R J Enterprise Logo" className="h-10 w-auto" />
+              <img src={logo} alt="R J Enterprise Logo" className="h-10 w-auto" />
               <div className="font-condensed font-bold text-xl text-white">
                 R J ENTERPRISE
               </div>
