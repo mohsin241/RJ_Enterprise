@@ -10,12 +10,26 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name is required' }),
+  name: z.string().min(3, { message: 'Name is required' }),
   company: z.string().min(2, { message: 'Company name is required' }),
-  email: z.string().email({ message: 'Please enter a valid email address' }),
-  phone: z.string().min(10, { message: 'Please enter a valid phone number' }),
-  product: z.string().optional(),
-  message: z.string().min(10, { message: 'Message is required (min 10 characters)' }),
+   email: z
+    .string()
+    .min(5, { message: 'Email is required' })
+    .email({ message: 'Please enter a valid email address' })
+    .regex(
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      { message: 'Invalid email format' }
+    ),
+   phone: z
+    .string()
+    .min(10, { message: 'Phone number is too short' })
+    .max(15, { message: 'Phone number is too long' })
+    .regex(
+      /^(\+?\d{1,4}[\s-]?)?(\(?\d{3,5}\)?[\s-]?)?\d{6,10}$/,
+      { message: 'Invalid phone number format' }
+    ),
+  product: z.string().min(1, { message: 'Please select a product' }),
+  message: z.string().optional(),
 });
 
 type ContactFormValues = z.infer<typeof formSchema>;
@@ -36,31 +50,43 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = async (data: ContactFormValues) => {
-    setIsSubmitting(true);
-    try {
-      // In a real implementation, you would send this data to your API
-      console.log('Form submitted:', data);
+ const onSubmit = async (data: ContactFormValues) => {
+  setIsSubmitting(true);
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+  try {
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("company", data.company);
+    formData.append("email", data.email);
+    formData.append("phone", data.phone);
+    formData.append("product", data.product || "");
+    formData.append("message", data.message);
 
+    const response = await fetch("https://getform.io/f/agdlnlzb", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you as soon as possible.",
       });
-
       form.reset();
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again later or contact us directly by phone.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
+    } else {
+      throw new Error("Failed to send form");
     }
-  };
+  } catch (error) {
+    toast({
+      title: "Error sending message",
+      description: "Please try again later or contact us directly by phone.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <section id="contact" className="py-16 bg-neutral-100">
@@ -169,7 +195,7 @@ const Contact = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Your Message *</FormLabel>
+                      <FormLabel>Your Message </FormLabel>
                       <FormControl>
                         <Textarea
                           placeholder="Please describe your requirements..."
