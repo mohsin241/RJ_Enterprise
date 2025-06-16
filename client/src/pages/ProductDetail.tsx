@@ -1,7 +1,7 @@
 import { useParams } from 'wouter';
 import { Helmet } from 'react-helmet-async';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'; 
 import Contact from '@/components/home/Contact';
 import { Product } from '@/types';
 import tmt from "../../src/assets/TMT Bar 1.jpg"
@@ -312,7 +312,7 @@ const products: Record<string, Product> = {
 };
 
 const ProductDetail = () => {
-  const { id } = useParams();
+   const { id } = useParams<{ id: string }>();
 
   if (!id || !products[id]) {
     return (
@@ -412,7 +412,7 @@ const ProductDetail = () => {
         </div>
         
         {/* Related Products */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h2 className="text-2xl font-condensed font-bold text-neutral-800 mb-6">Related Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {product.relatedProducts.map((relId) => {
@@ -442,7 +442,7 @@ const ProductDetail = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
       
       {/* Contact Section */}
