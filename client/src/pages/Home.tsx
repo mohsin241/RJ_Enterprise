@@ -6,7 +6,7 @@ import Products from '@/components/home/Products';
 import Industries from '@/components/home/Industries';
 import Services from '@/components/home/Services';
 import Testimonials from '@/components/home/Testimonials';
-import CallToAction from '@/components/home/CallToAction';
+// import CallToAction from '@/components/home/CallToAction';
 import Contact from '@/components/home/Contact';
 
 const Home = () => {
@@ -40,7 +40,7 @@ const Home = () => {
       <Industries />
       <Services />
       <Testimonials />
-      <CallToAction />
+      {/* <CallToAction /> */}
       <Contact />
     </>
   );
