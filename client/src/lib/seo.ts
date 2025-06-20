@@ -16,7 +16,7 @@ export const SEO: React.FC<SEOProps> = ({
   description = 'R J Enterprise offers high-quality TMT bars, steel plates, hot rolled coils & industrial steel products. ISO 9001:2008 certified steel supplier serving construction, oil & gas, manufacturing industries.',
   keywords = 'steel supplier, TMT bars, mild steel plates, boiler quality plates, hot rolled coils, construction steel, industrial steel',
   ogImage = 'https://images.unsplash.com/photo-1616737676197-696fe94df40a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630',
-  ogUrl = 'https://www.rjenterpriseinfo.com/',
+  ogUrl = 'https://rj-enterprise.vercel.app/',
   ogType = 'website',
   twitterCard = 'summary_large_image',
 }) => {
