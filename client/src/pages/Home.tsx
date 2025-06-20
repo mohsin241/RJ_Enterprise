@@ -30,7 +30,7 @@ const Home = () => {
         <meta name="twitter:description" content="Premium steel products for construction, manufacturing & industrial applications. ISO 9001:2008 certified." />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://www.rjenterpriseinfo.com/" />
+        {/* <link rel="canonical" href="https://www.rjenterpriseinfo.com/" /> */}
       </Helmet>
       
       <Hero />
