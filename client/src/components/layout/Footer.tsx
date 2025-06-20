@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import logo from "../../../public/logo.png";
+import logo from "../../../../public/logo.png";
 
 const Footer = () => {
   return (

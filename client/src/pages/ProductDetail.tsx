@@ -4,17 +4,17 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { Button } from '@/components/ui/button'; 
 import Contact from '@/components/home/Contact';
 import { Product } from '@/types';
-import tmt from "../../src/assets/TMT Bar 1.jpg"
-import coil from "../../src/assets/Stainless-Steel-Cold-Rolling-Coil-304.jpg"
-import beam from "../../src/assets/wmremove-transformed.jpg"
-import chequered from "../../src/assets/ms-chequered-plates.jpg"
-import round from "../../src/assets/mild-steel-round-bars-1530870379-4069527.jpg"
-import plate from "../../src/assets/ms-plates-1000x1000.jpg"
-import c45 from "../../src/assets/alloy-steel-plates.jpg"
-import square from "../../src/assets/tool-steel-alloy-steel-square-bars.jpg"
-import channel from "../../src/assets/stainless-steel-channels-1595395255.jpg"
-import bq from "../../src/assets/Boiler-Quality-Plate-SA516-Gr70n-Nace-Hic-Pressure-Vessel-Steel-Plates-Carbon-Steel-Sheet.jpg"
-import angle from "../../src/assets/mild-steel-angles-1024812.jpg"
+import tmt from "../assets/tmt.webp"
+import coil from "../assets/coil.webp"
+import beam from "../assets/beam.webp"
+import chequered from "../assets/chequered.webp"
+import round from "../assets/round.webp"
+import plate from "../assets/plate.webp"
+import c45 from "../assets/c45.webp"
+import square from "../assets/square.webp"
+import channel from "../assets/channel.webp"
+import bq from "../assets/bq.webp"
+import angle from "../assets/angle.webp";
 
 const products: Record<string, Product> = {
    'tmt-bars': {
@@ -363,7 +363,7 @@ const ProductDetail = () => {
               <img 
                 src={product.image} 
                 alt={product.alt} 
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-80 object-cover rounded-lg"
                 loading="lazy" 
               />
               <div className="flex flex-wrap gap-2 mt-4">

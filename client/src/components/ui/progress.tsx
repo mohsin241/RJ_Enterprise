@@ -18,11 +18,14 @@ const Progress = React.forwardRef<
     {...props}
   >
     <ProgressPrimitive.Indicator
-      className="h-full w-full flex-1 bg-primary transition-all"
-      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
+      className={cn(
+        "h-full w-full flex-1 bg-primary transition-all",
+        value !== undefined && `-translate-x-[${100 - (value || 0)}%]`
+      )}
     />
   </ProgressPrimitive.Root>
 ))
 Progress.displayName = ProgressPrimitive.Root.displayName
 
 export { Progress }
+/* If needed, add a custom utility in your CSS for dynamic translate-x values. */

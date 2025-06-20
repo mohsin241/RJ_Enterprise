@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import heroImage from "../../assets/factory-1140760_640.jpg"
+// import heroImage from "../../assets/factory-1140760_640.jpg"
 
 
 const Hero = () => {
@@ -8,8 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
       <div className="relative h-[600px] md:h-[650px] overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center" 
-          style={{ backgroundImage: `url(${heroImage})` }}
+          className="absolute inset-0 bg-cover bg-center hero-bg-image" 
           aria-label="Modern steel manufacturing facility with hot rolled steel production"
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-20"></div>
@@ -53,3 +52,9 @@ const Hero = () => {
 };
 
 export default Hero;
+
+/* Add to the bottom of the file or in a global CSS file:
+.hero-bg-image {
+  background-image: url('../../assets/factory-1140760_640.jpg');
+}
+*/
