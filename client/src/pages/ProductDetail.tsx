@@ -346,7 +346,7 @@ const ProductDetail = () => {
         <meta property="og:description" content={product.description} />
         <meta property="og:image" content={product.image} />
         <meta property="og:type" content="product" />
-        <link rel="canonical" href={`https://rj-enterprise.vercel.app/products/${product.id}`} />
+        <link rel="canonical" href={`https://www.rjenterpriseinfo.com//products/${product.id}`} />
       </Helmet>
 
       <div className="container mx-auto px-4 py-8">

@@ -19,7 +19,7 @@ const Home = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://rj-enterprise.vercel.app/" />
+        <meta property="og:url" content="https://www.rjenterpriseinfo.com//" />
         <meta property="og:title" content="R J Enterprise | Trusted Steel Supplier in India" />
         <meta property="og:description" content="Leading supplier of industrial-grade steel products including TMT bars, plates & coils for construction, manufacturing & oil & gas sectors." />
         <meta property="og:image" content="../assets/logo.png" />
@@ -30,7 +30,7 @@ const Home = () => {
         <meta name="twitter:description" content="Premium steel products for construction, manufacturing & industrial applications. ISO 9001:2008 certified." />
         
         {/* Canonical URL */}
-        {/* <link rel="canonical" href="https://rj-enterprise.vercel.app/" /> */}
+        {/* <link rel="canonical" href="https://www.rjenterpriseinfo.com//" /> */}
       </Helmet>
       
       <Hero />
