@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
-import tmt from "../../assets/TMT Bar 1.jpg";
-import c45 from "../../assets/alloy-steel-plates.jpg";
-import bq from "../../assets/Boiler-Quality-Plate-SA516-Gr70n-Nace-Hic-Pressure-Vessel-Steel-Plates-Carbon-Steel-Sheet.jpg"
+import tmt from "../../assets/tmt.webp";
+import c45 from "../../assets/c45.webp";
+import bq from "../../assets/bq.webp";
 
 const featuredProducts = [
   {

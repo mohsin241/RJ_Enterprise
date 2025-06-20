@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
-import tmt from "../../assets/TMT Bar 1.jpg"
-import coil from "../../assets/Stainless-Steel-Cold-Rolling-Coil-304.jpg"
-import beam from "../../assets/wmremove-transformed.jpg"
-import chequered from "../../assets/ms-chequered-plates.jpg"
-import round from "../../assets/mild-steel-round-bars-1530870379-4069527.jpg"
-import plate from "../../assets/ms-plates-1000x1000.jpg"
-import c45 from "../../assets/alloy-steel-plates.jpg"
-import square from "../../assets/tool-steel-alloy-steel-square-bars.jpg"
-import channel from "../../assets/stainless-steel-channels-1595395255.jpg"
-import bq from "../../assets/Boiler-Quality-Plate-SA516-Gr70n-Nace-Hic-Pressure-Vessel-Steel-Plates-Carbon-Steel-Sheet.jpg"
-import angle from "../../assets/mild-steel-angles-1024812.jpg"
+import tmt from "../../assets/tmt.webp"
+import coil from "../../assets/coil.webp"
+import beam from "../../assets/beam.webp"
+import chequered from "../../assets/chequered.webp"
+import round from "../../assets/round.webp"
+import plate from "../../assets/plate.webp"
+import c45 from "../../assets/c45.webp"
+import square from "../../assets/square.webp"
+import channel from "../../assets/channel.webp"
+import bq from "../../assets/bq.webp"
+import angle from "../../assets/angle.webp"
 
 const products = [
   {
