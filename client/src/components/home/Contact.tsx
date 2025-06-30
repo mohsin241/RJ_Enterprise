@@ -62,7 +62,7 @@ const Contact = () => {
     formData.append("product", data.product || "");
     formData.append("message", data.message);
 
-    const response = await fetch("https://getform.io/f/agdlnlzb", {
+    const response = await fetch("https://getform.io/f/bmdmwyea", {
       method: "POST",
       body: formData,
     });
