@@ -272,7 +272,7 @@ const Contact = () => {
                   <span className="material-icons text-white">facebook</span>
                 </a>
 
-                <a href="https://www.indiamart.com/rjenterpriseinfo" aria-label="IndiaMART" className="bg-white/10 pl-2 hover:bg-white/20 w-10 h-10 rounded-full flex items-center transition">
+                <a href="https://www.indiamart.com/r-j-enterprisevasaivirar/" aria-label="IndiaMART" className="bg-white/10 pl-2 hover:bg-white/20 w-10 h-10 rounded-full flex items-center transition">
                   <img src="/indiaMart.png" alt="IndiaMART" className="w-6 h-6 object-contain filter invert" />
                 </a>
               </div>
